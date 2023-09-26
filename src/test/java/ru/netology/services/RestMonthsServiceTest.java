@@ -1,18 +1,16 @@
-package ru.netology.javaqa.javaqamvn.services;
+package ru.netology.services;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
+import ru.netology.services.RestMonthsService;
 
 public class RestMonthsServiceTest {
 
     @Test
     public void testRegisteredUnderLimit(int income, int expenses, int threshold) {
-        org.example.RestMonthsService service = new org.example.RestMonthsService();
+        RestMonthsService service = new RestMonthsService();
 
-        int expected = 10_000, 3_000, 20_000;
+        int expected = 10_000, 2_000, 20_000;
         int actual = service.calcMonths(income, expenses, threshold);
 
         Assertions.assertEquals(expected, actual);
