@@ -1,4 +1,3 @@
-package ru.netology.services;
 package ru.netology.services.javaqamvn.services;
 
 public class RestMonthsService {

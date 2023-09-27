@@ -2,16 +2,16 @@ package ru.netology.services;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.netology.services.RestMonthsService;
+import ru.netology.services.javaqamvn.services.RestMonthsService;
 
 public class RestMonthsServiceTest {
 
     @Test
-    public void testRegisteredUnderLimit(int income, int expenses, int threshold) {
+    public void calcMonthsToRest() {
         RestMonthsService service = new RestMonthsService();
 
-        int expected = 10_000, 2_000, 20_000;
-        int actual = service.calcMonths(income, expenses, threshold);
+        int expected = 3;
+        int actual = service.calcMonths(10_000, 3_000, 20_000);
 
         Assertions.assertEquals(expected, actual);
     }
